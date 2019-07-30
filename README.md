@@ -1,3 +1,9 @@
+#what
+chat-spaceを作成するためのDB設計
+
+#why
+スムーズにアプリケーションを開発をするために最初にエンティティを洗い出すため
+
 # DB設計
 
 ## usersテーブル
@@ -11,6 +17,7 @@
 ### Association
 - has_many :groups, through: :menbers
 - has_many :messages
+- has_many :menbers
 
 ## groupsテーブル
 
@@ -21,6 +28,7 @@
 ### Association
 - has_many :users, through: :menbers
 - has_many :messages
+- has_many :menbers
 
 ## membersテーブル
 
