@@ -1,0 +1,52 @@
+.flash-box
+  グループを作成しました
+
+
+.wrapper
+
+  .chat-side
+    .chat-side__side-header
+      .chat-side__side-header__box
+        .chat-side__side-header__box__user-name
+          name
+        .chat-side__side-header__box__menu
+          %span.chat-side__side-header__box__menu__new-group
+          %i.fa.fa-edit
+          %span.chat-side__side-header__box__menu__edit-user
+          %i.fa.fa-cog
+    .chat-side__groups
+      .chat-side__groups__group
+        .chat-side__groups__group__name
+          test
+        .chat-side__groups__group__latest-message
+          tttt
+
+  .chat-main
+    .chat-main__main-header
+      .chat-main__main-header__left-box
+        .chat-main__main-header__left-box__current-group
+          現在のグループ名
+        .chat-main__main-header__left-box__member-list
+          Member : ryo,fukumoto
+      .chat-main__main-header__edit-btn
+        Edit
+
+    .chat-main__messages
+      .chat-main__messages__message
+        .chat-main__messages__message__upper-info
+          %p.chat-main__messages__message__upper-info__talker
+            ryo-fukumoto
+          %p.chat-main__messages__message__upper-info__date
+            2019/7/31(Wed) 19:48
+        .chat-main__messages__message__text
+          メッセージです
+
+    .form
+      %form.form__new-message
+        .form__new-message__input-box
+          %input.form__new-message__input-box__text(type="text" placeholder="入力してください")
+          %label.form__new-message__input-box__image(for="message-image")
+            %i.fa.fa-picture-o
+            %input.form__new-message__input-box__image__file(type="file" id="message-image")
+        %input.form__new-message__input-box__submit-btn(type="submit" value="Send")
+            
