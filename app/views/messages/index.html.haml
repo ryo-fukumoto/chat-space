@@ -4,28 +4,29 @@
   .chat-main__main-header
     .chat-main__main-header__left-box
       .chat-main__main-header__left-box__current-group
-        現在のグループ名
+        =@group.name
       .chat-main__main-header__left-box__member-list
-        Member : ryo,fukumoto
-    .chat-main__main-header__edit-btn
-      Edit
+        - @group.group_users.each do |user_id|
+          = user_id.user.name
+    =link_to "Edit", edit_group_path(@group.id), class: "btn"
 
   .chat-main__messages
     .chat-main__messages__message
-      .chat-main__messages__message__upper-info
-        %p.chat-main__messages__message__upper-info__talker
-          ryo-fukumoto
-        %p.chat-main__messages__message__upper-info__date
-          2019/7/31(Wed) 19:48
-      .chat-main__messages__message__text
-        メッセージです
-
+      = render @messages
+      -# = render partial: 'message', collection: @messages
+      -# 上記は省略せずに書いた場合
+      -# eachを使うよりrenderとオプションcollectionを使うほうが処理が高速
+      -# インスタンス変数が複数系、部分テンプレートが単数系の場合は省略できる
+        
   .form
-    %form.form__new-message
+    .form__new-message
+    = form_for [@group, @message] do |f|
       .form__new-message__input-box
-        %input.form__new-message__input-box__text(type="text" placeholder="入力してください")
-        %label.form__new-message__input-box__image(for="message-image")
-          %i.fa.fa-picture-o
-          %input.form__new-message__input-box__image__file(type="file" id="message-image")
-      %input.form__new-message__input-box__submit-btn(type="submit" value="Send")
-          
+        = f.text_field :content, class: 'form__new-message__input-box__text', placeholder: 'type a message'
+        = f.label :image, class: 'form__new-message__input-box__image' do
+          = fa_icon 'picture-o', class: 'icon'
+          = f.file_field :image, class: 'form__new-message__input-box__image__file'
+      = f.submit 'Send', class: 'form__new-message__input-box__submit-btn'
+
+  
+  

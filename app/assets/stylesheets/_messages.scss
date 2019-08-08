@@ -73,15 +73,17 @@ $mizuiro: #38aef0;
         color: #999999;
       }
     }
-    &__edit-btn{
-        height: 40px;
-        line-height: 40px;
-        color: #38aef0;
-        border: solid 1px $mizuiro;
-        right: 40px;
-        position: absolute;
-        padding: 0 20px;
-        margin-top: 28px;
+    
+
+    .btn{
+      height: 40px;
+      line-height: 40px;
+      color: #38aef0;
+      border: solid 1px $mizuiro;
+      right: 40px;
+      position: absolute;
+      padding: 0 20px;
+      margin-top: 28px;
     }
   }
   &__messages{
