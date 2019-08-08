@@ -11,12 +11,11 @@
     =link_to "Edit", edit_group_path(@group.id), class: "btn"
 
   .chat-main__messages
-    .chat-main__messages__message
-      = render @messages
-      -# = render partial: 'message', collection: @messages
-      -# 上記は省略せずに書いた場合
-      -# eachを使うよりrenderとオプションcollectionを使うほうが処理が高速
-      -# インスタンス変数が複数系、部分テンプレートが単数系の場合は省略できる
+    = render @messages
+    -# = render partial: 'message', collection: @messages
+    -# 上記は省略せずに書いた場合
+    -# eachを使うよりrenderとオプションcollectionを使うほうが処理が高速
+    -# インスタンス変数が複数系、部分テンプレートが単数系の場合は省略できる
         
   .form
     .form__new-message
