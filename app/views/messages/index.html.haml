@@ -8,8 +8,7 @@
       .chat-main__main-header__left-box__member-list
         - @group.group_users.each do |user_id|
           = user_id.user.name
-    .chat-main__main-header__edit-btn
-      Edit
+    =link_to "Edit", edit_group_path(@group.id), class: "btn"
 
   .chat-main__messages
     .chat-main__messages__message
