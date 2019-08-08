@@ -13,7 +13,7 @@ $mizuiro: #38aef0;
 .chat-side{
   width: 300px;
   float: left;
-  color: #FFFFFF;
+  color:white;
   font-weight: bold;
   &__side-header{
     background-color: #253141;
@@ -26,6 +26,9 @@ $mizuiro: #38aef0;
       width: 100%;
       font-size: 16px;
       justify-content: space-between;
+      &__menu{
+        color:white;
+      }
     }
   }
   &__groups{
@@ -37,10 +40,12 @@ $mizuiro: #38aef0;
       margin-bottom: 40px;
       &__name{
         font-size: 15px;
+        color: white;
       }
       &__latest-message{
         font-size: 11px;
         margin-top: 5px;
+        color: white;
       }
     }
   }
