@@ -2,7 +2,7 @@ $(document).on('turbolinks:load', function(){
 
     function build_message(message){
       var img = (message.image.url !== null)?
-                  (`<img src = ${message.url} >`) : ("")
+                  (`<img src = ${message.image.url} >`) : ("")
 
       var html = `<div class="chat-main__messages__message">
       <div class="chat-main__messages__message__upper-info">
@@ -39,7 +39,6 @@ $(document).on('turbolinks:load', function(){
     .done(function(data){
       var html = build_message(data);
       $('.chat-main__messages').append(html)
-      $('#message_content').val('');
       $('form')[0].reset();
 
       $('.chat-main__messages').animate({ scrollTop: $('.chat-main__messages')[0].scrollHeight});
