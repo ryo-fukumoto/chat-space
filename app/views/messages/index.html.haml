@@ -3,7 +3,7 @@
 .chat-main
   .chat-main__main-header
     .chat-main__main-header__left-box
-      .chat-main__main-header__left-box__current-group
+      .chat-main__main-header__left-box__current-group{"data-group_id": @group.id}
         =@group.name
       .chat-main__main-header__left-box__member-list
         - @group.group_users.each do |user_id|
