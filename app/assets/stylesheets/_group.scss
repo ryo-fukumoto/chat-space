@@ -60,12 +60,19 @@
       float: right;
       width: 70%;
     }
-
+  }
     .chat-group-form__label {
       display: block;
       line-height: 50px;
       font-weight: bold;
       text-align: right;
+    }
+
+    .chat-group-form__label-member{
+      float: right;
+      font-weight: bold;
+      padding-top: 40px;
+      padding-right: 25px;
     }
 
     .chat-group-form__input {
@@ -76,7 +83,6 @@
       box-sizing: border-box;
     }
   }
-
   .chat-group-user {
     padding: 0 15px;
     line-height: 50px;
@@ -114,4 +120,3 @@
     background-color: #38aef0;
     border: 0;
   }
-}
