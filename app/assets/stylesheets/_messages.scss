@@ -14,13 +14,13 @@ $mizuiro: #38aef0;
   width: 300px;
   float: left;
   color:white;
-  font-weight: bold;
   &__side-header{
     background-color: #253141;
     height: 100px;
     display: flex;
     align-items: center;
     padding: 0 20px;
+    font-weight: bold;
     &__box{
       display: flex;
       width: 100%;
@@ -28,6 +28,9 @@ $mizuiro: #38aef0;
       justify-content: space-between;
       &__menu{
         color:white;
+        .icon{
+          color: white;
+        }
       }
     }
   }
