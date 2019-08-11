@@ -12,9 +12,9 @@
             = fa_icon 'cog', class: 'icon'
 
     .chat-side__groups
-      .chat-side__groups__group
-        - current_user.groups.each do |group|
-          = link_to group_messages_path(group) do
+      - current_user.groups.each do |group|
+        = link_to group_messages_path(group) do
+          .chat-side__groups__group
             .chat-side__groups__group__name
               = group.name
             .chat-side__groups__group__latest-message
