@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function(){ 
+$(function(){ 
 
     function build_message(message){
       var img = (message.image.url !== null)?
@@ -14,10 +14,12 @@ $(document).on('turbolinks:load', function(){
       </div>
       </div>
       <div class="chat-main__messages__message__text">
-      <p class="chat-main__messages__message__text__content">
+      <div class="chat-main__messages__message__text__content">
       ${message.content}
+      </div>
+      <div>
       ${img}
-      </p>
+      </div>
       
       </div>
       </div>`
